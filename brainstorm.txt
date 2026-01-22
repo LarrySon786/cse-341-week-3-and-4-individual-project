@@ -1,0 +1,30 @@
+
+
+
+
+Brainstorm Ideas:
+1. Restaurant - Pizza Delivery
+- Customers (id, name, street address, city, state, zip, phone, fullfilled )
+- menu? (id, peparoni, cheese, sausage, hawaian, supreme, )
+
+
+
+
+
+2. School enrollment
+- Students (id, name, phone, home state, email, program)
+- Applicants (id, name, phone, home state, email, applying-program, high-school GPA)
+
+
+
+
+
+GRADED
+
+- SWagger.Json must be present and working
+- Propper HTTP Status codes returned when making requests
+
+- POST and PUT routes are working. Returns a 400 or 500 error properly
+
+- All routes use error handling (try / catch)
+

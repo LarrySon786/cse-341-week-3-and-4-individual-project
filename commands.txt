@@ -1,0 +1,24 @@
+Commands used to create application
+
+INITALIZE PROJECT
+npm init -y
+npm install
+
+ADD Nodemon
+npm install -g nodemon
+npm install --save-dev nodemon
+Add Script "start": "nodemon app.js"
+
+
+ADD .env
+set-up gitignore
+npm install dotenv
+
+
+
+
+
+
+
+
+
