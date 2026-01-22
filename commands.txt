@@ -1,5 +1,9 @@
 Commands used to create application
 
+set-up gitignore FIRST
+- add node_modules/
+- add .env
+
 INITALIZE PROJECT
 npm init -y
 npm install
@@ -9,10 +13,23 @@ npm install -g nodemon
 npm install --save-dev nodemon
 Add Script "start": "nodemon app.js"
 
-
 ADD .env
-set-up gitignore
 npm install dotenv
+
+ADD MongoDB
+- npm install mongodb
+- Setup require statements in app.js (Or you can set-up mongodb connection in models folder and the require that folder
+in the app.js file): 
+const mongodb = require('./models/database')
+- In the database connection file, you need to require: 
+const dotenv = require('dotenv') &&& const mongoClient = require('mongodb').MongoClient()
+- Write functions to connect to MongoDb:
+
+
+
+ADD Swagger
+
+
 
 
 
