@@ -6,24 +6,38 @@ const ObjectId = require('mongodb').ObjectId;
 // get all applicants
 const getAllApplicants = async (req, res, next) => {
     //#swagger.tags=['Applicant Page']
-    const result = await mongodb.getDatabase().db('student-enrollment-project').collection('student-applicants').find();
-    result.toArray().then((studentApplicants) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(studentApplicants)
-    })
-}
+    await mongodb
+        .getDatabase()
+        .db('student-enrollment-project')
+        .collection('student-applicants')
+        .find()
+        .toArray((err, studentApplicants) => {
+            if (err) {
+                res.status(400).json({ message: err });
+            }
+            res.setHeader('Content-Type', 'application/json');
+            res.status(200).json(studentApplicants)
+        });
+};
 
 // GET one applicant by ID
 const getApplicantById = async (req, res, next) => {
     //#swagger.tags=['Applicant Page']
     const applicantId = new ObjectId(req.params.id);
 
-    const result = await mongodb.getDatabase().db('student-enrollment-project').collection('student-applicants').find({ _id: applicantId });
-    result.toArray().then((studentApplicants) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(studentApplicants[0])
-    })
-}
+    await mongodb
+        .getDatabase()
+        .db('student-enrollment-project')
+        .collection('student-applicants')
+        .find({ _id: applicantId })
+        .toArray((err, studentApplicants) => {
+            if (err) {
+                res.status(400).json({ message: err });
+            }
+            res.setHeader('Content-Type', 'application/json');
+            res.status(200).json(studentApplicants[0])
+        });
+};
 
 
 // POST - create Applicant
