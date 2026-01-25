@@ -1,20 +1,31 @@
+***
 Commands used to create application
+***
+
 
 set-up gitignore FIRST
 - add node_modules/
 - add .env
 
+
+
 INITALIZE PROJECT
 npm init -y
 npm install
+
+
 
 ADD Nodemon
 npm install -g nodemon
 npm install --save-dev nodemon
 Add Script "start": "nodemon app.js"
 
+
+
 ADD .env
 npm install dotenv
+
+
 
 ADD MongoDB
 - npm install mongodb
