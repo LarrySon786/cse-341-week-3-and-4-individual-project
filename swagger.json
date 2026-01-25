@@ -5,7 +5,7 @@
     "description": "An Api to display enrollments for project",
     "version": "1.0.0"
   },
-  "host": "https://enrollment-project-4gqg.onrender.com",
+  "host": "enrollment-project-4gqg.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -20,6 +20,16 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }

@@ -25,6 +25,15 @@ app.use((req, res, next) => {
     next();
 })
 
+// ERROR HANDLING
+process.on('uncaughtException', error => {
+ logError(error)
+
+ if (!isOperationalError(error)) {
+ process.exit(1)
+ }
+})
+
 // SET-UP PORT
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
