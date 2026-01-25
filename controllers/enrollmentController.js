@@ -6,38 +6,24 @@ const ObjectId = require('mongodb').ObjectId;
 // get all enrolled
 const getAllEnrolled = async (req, res, next) => {
     //#swagger.tags=['Enrollment Page']
-    const result = await mongodb
-        .getDatabase()
-        .db('student-enrollment-project')
-        .collection('students-enrolled')
-        .find()
-        .toArray((err, studentsEnrolled) => {
-            if (err) {
-                res.status(400).json({ message: err });
-            }
-            res.setHeader('Content-Type', 'application/json');
-            res.status(200).json(studentsEnrolled)
-        });
-};
+    const result = await mongodb.getDatabase().db('student-enrollment-project').collection('students-enrolled').find();
+    result.toArray().then((studentsEnrolled) => {
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(studentsEnrolled)
+    })
+}
 
 // GET one enrolled by ID
 const getEnrolledById = async (req, res, next) => {
     //#swagger.tags=['Enrollment Page']
     const enrolledId = new ObjectId(req.params.id);
 
-    const result = await mongodb
-        .getDatabase()
-        .db('student-enrollment-project')
-        .collection('students-enrolled')
-        .find({ _id: enrolledId })
-        .toArray((err, studentsEnrolled) => {
-            if (err) {
-                res.status(400).json({ message: err });
-            }
-            res.setHeader('Content-Type', 'application/json');
-            res.status(200).json(studentsEnrolled[0])
-        });
-};
+    const result = await mongodb.getDatabase().db('student-enrollment-project').collection('students-enrolled').find({ _id: enrolledId });
+    result.toArray().then((studentsEnrolled) => {
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(studentsEnrolled[0])
+    })
+}
 
 
 // POST - create enrolled
