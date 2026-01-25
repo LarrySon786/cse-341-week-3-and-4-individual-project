@@ -1,0 +1,35 @@
+### GET Request
+GET http://localhost:3000/enrollment
+
+###GET one
+GET http://localhost:3000/enrollment/69724534689d70fae796f2a6
+
+
+### Post one new
+POST http://localhost:3000/enrollment
+content-type: application/json
+
+{
+    "firstName":"Bill",
+    "lastName":"Smith",
+    "phone": "333-333-3333",
+    "email":"hero@example.com",
+    "homeState":"Ohio",
+    "program":"Culinary"
+}
+
+### UPDATE one
+PUT http://localhost:3000/enrollment/69763dd0e4459647e048059c HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Jane",
+    "lastName":"Smith",
+    "phone": "333-333-3333",
+    "email":"hero@example.com",
+    "homeState":"Virgina",
+    "program":"Culinary"
+}
+
+### Delete
+DELETE http://localhost:3000/enrollment/697639d0128e118c4478b398

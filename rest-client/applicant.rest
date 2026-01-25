@@ -1,0 +1,39 @@
+### GET Request
+GET http://localhost:3000/applicant
+
+###GET one
+GET http://localhost:3000/applicant/697245b5689d70fae796f2a8
+
+
+### Post one new
+POST http://localhost:3000/applicant
+content-type: application/json
+
+{
+    "firstName":"Jim",
+    "lastName":"Charles",
+    "phone": "333-333-3333",
+    "email":"hero@example.com",
+    "homeState":"New York",
+    "chosenProgram":"Candy Making",
+    "gpa":"3.0"
+}
+
+
+
+### UPDATE one
+PUT http://localhost:3000/applicant/697640da8b156adba9d2cd92 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Barnes",
+    "lastName":"Charles",
+    "phone": "333-333-3333",
+    "email":"hero@example.com",
+    "homeState":"New York",
+    "chosenProgram":"Candy Making",
+    "gpa":"3.0"
+}
+
+### Delete
+DELETE http://localhost:3000/applicant/697640fd8b156adba9d2cd94

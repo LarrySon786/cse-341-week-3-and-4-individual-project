@@ -27,7 +27,14 @@ const dotenv = require('dotenv') &&& const mongoClient = require('mongodb').Mong
 
 
 
-ADD Swagger
+ADD SWAGGER
+Install Swagger
+'npm install swagger-ui-express'
+
+Install Swagger-Autogen
+'npm install swagger-autogen'
+
+Set-up swagger.js file in root folder. Set-up swagger.js file on routes folder
 
 
 
