@@ -49,9 +49,12 @@ Set-up swagger.js file in root folder. Set-up swagger.js file on routes folder
 
 
 
+EXPRESS VALIDATOR 
+*This is to perform validations in middleware
+1. pnpm install express-validator
 
-
-
+2. Simply require the validator at the top of the file using it. See below:
+const { body, validationResult } = require('express-validator');
 
 
 

@@ -10,7 +10,7 @@ POST http://localhost:3000/applicant
 content-type: application/json
 
 {
-    "firstName":"Jim",
+    "firstName":"Luke",
     "lastName":"Charles",
     "phone": "333-333-3333",
     "email":"hero@example.com",
@@ -30,7 +30,7 @@ content-type: application/json
     "lastName":"Charles",
     "phone": "333-333-3333",
     "email":"hero@example.com",
-    "homeState":"New York",
+    "homeState":"Iowa",
     "chosenProgram":"Candy Making",
     "gpa":"3.0"
 }

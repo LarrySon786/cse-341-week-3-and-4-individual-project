@@ -19,11 +19,11 @@ content-type: application/json
 }
 
 ### UPDATE one
-PUT http://localhost:3000/enrollment/69763dd0e4459647e048059c HTTP/1.1
+PUT http://localhost:3000/enrollment/69764b4a6ef0e1acd974dbd5 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Jane",
+    "firstName":"William",
     "lastName":"Smith",
     "phone": "333-333-3333",
     "email":"hero@example.com",
