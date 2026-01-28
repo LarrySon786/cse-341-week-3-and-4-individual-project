@@ -1,31 +1,31 @@
-***
+*******************************************************************************************
 Commands used to create application
-***
+*******************************************************************************************
 
 
 set-up gitignore FIRST
 - add node_modules/
 - add .env
 
-
+********
 
 INITALIZE PROJECT
 npm init -y
 npm install
 
-
+********
 
 ADD Nodemon
 npm install -g nodemon
 npm install --save-dev nodemon
 Add Script "start": "nodemon app.js"
 
-
+********
 
 ADD .env
 npm install dotenv
 
-
+********
 
 ADD MongoDB
 - npm install mongodb
@@ -36,7 +36,7 @@ const mongodb = require('./models/database')
 const dotenv = require('dotenv') &&& const mongoClient = require('mongodb').MongoClient()
 - Write functions to connect to MongoDb:
 
-
+*******
 
 ADD SWAGGER
 Install Swagger
@@ -47,7 +47,7 @@ Install Swagger-Autogen
 
 Set-up swagger.js file in root folder. Set-up swagger.js file on routes folder
 
-
+********
 
 EXPRESS VALIDATOR 
 *This is to perform validations in middleware
@@ -56,7 +56,11 @@ EXPRESS VALIDATOR
 2. Simply require the validator at the top of the file using it. See below:
 const { body, validationResult } = require('express-validator');
 
+********
 
-
-
+OAUTH 2.0
+1. pnpm install passport
+2. pnpm install express-session
+3. pnpm install passport-github2
+4. pnpm install cors
 

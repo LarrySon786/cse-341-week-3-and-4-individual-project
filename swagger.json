@@ -5,9 +5,10 @@
     "description": "An Api to display enrollments for project",
     "version": "1.0.0"
   },
-  "host": "enrollment-project-4gqg.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
+    "http",
     "https"
   ],
   "paths": {
